@@ -4,6 +4,10 @@ This repository consists of files that can be used for getting the logs of pods 
 ### Usage: 
 
 ```
+sagar@DESKTOP-VS85098:/tmp/get-troubleshooting-data$ kubectl get pods -n abc
+NAME        READY   STATUS             RESTARTS         AGE
+nginx-pod   0/1     CrashLoopBackOff   61 (4m30s ago)   14h
+
 sagar@DESKTOP-VS85098:/tmp/get-troubleshooting-data$kubectl apply -f job.yaml
 
 sagar@DESKTOP-VS85098:/tmp/get-troubleshooting-data$ kubectl get pods
