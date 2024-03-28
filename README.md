@@ -9,10 +9,10 @@ This process involves building a custom image containing a Python script for ext
 ```
 # Clone this repository
 # Build the custom image with Docker
-docker build -t sagarkundral/my-python-app:${tag} -f Dockerfile-new .
+docker build -t [username]/[image-name]:[tag] -f Dockerfile .
 
 # Push the image to your repository
-docker push sagarkundral/my-python-app:${tag}
+docker push [username]/[image-name]:[tag]
 
 ```
 ### RBAC Configuration
@@ -22,7 +22,7 @@ For the Kyverno generate policy to function correctly, it requires permissions t
 Customize the get-debug-data-policy to include appropriate details like the image, Jira server, project key, and issue type based on your setup. Prior to deploying this policy, create a secret with your Jira API token, which will be mounted inside the pod as a volume for Jira server authentication.
 
 ```
-kubectl -n abc create secret generic api-token-secret --from-literal=apiToken=xxxxxx
+kubectl -n <namespace> create secret generic api-token-secret --from-literal=apiToken=<jira token>
 ```
 
 ### Testing
