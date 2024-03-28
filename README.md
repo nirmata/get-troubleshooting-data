@@ -1,8 +1,9 @@
-Kyverno Policy Testing Repository
+# Kyverno Policy Testing Repository
 This repository houses essential resources for testing a Kyverno policy designed to initiate a job. This job gathers troubleshooting data (including logs, kubectl describe output, and events from the namespace) from pods that have restarted three times and subsequently creates a Jira ticket.
 
-Usage
-Building the Image
+## Usage:
+
+### Building the Image
 This process involves building a custom image containing a Python script for extracting pod details.
 
 bash
