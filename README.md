@@ -1,4 +1,4 @@
-# Kyverno Policy Testing Repository
+# Kyverno-Policy-Based Troubleshooting and Resource Management for Kubernetes
 This repository includes resources for testing a Kyverno policy designed to initiate a job. This job gathers troubleshooting data (including logs, kubectl describe output, and events from the namespace) from pods that have restarted three times and subsequently creates a Jira ticket.
 
 ## Prerequisites:
