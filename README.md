@@ -6,14 +6,15 @@ This repository houses essential resources for testing a Kyverno policy designed
 ### Building the Image
 This process involves building a custom image containing a Python script for extracting pod details.
 
-bash
-Copy code
+```
 # Clone this repository
 # Build the custom image with Docker
 docker build -t sagarkundral/my-python-app:${tag} -f Dockerfile-new .
 
 # Push the image to your repository
 docker push sagarkundral/my-python-app:${tag}
+
+```
 RBAC Configuration
 For the Kyverno generate policy to function correctly, it requires permissions to generate jobs, and the associated service accounts require permissions to retrieve describe outputs, events, and logs of pods across all namespaces. Deploy cr-generate.yaml and readpods-cr-crb.yaml for this purpose.
 
