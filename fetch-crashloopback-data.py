@@ -44,14 +44,6 @@ def get_pod_details(api_instance, namespace, pod_name):
                     f"  Effect: {toleration.effect}\n" \
                     f"  Toleration Seconds: {toleration.toleration_seconds if toleration.toleration_seconds else 'Not specified'}\n"  
 
-    # describe += "\Conditions:\n"    
-    # for condition in pod.status.conditions:  
-    #     describe += f"  Type \t\t Status\n" \
-    #                 f"  {condition.type} \t\t {condition.status}\n" \
-    #                 f"  Last Transition Time: {condition.last_transition_time}\n" \
-    #                 f"  Reason: {condition.reason}\n" \
-    #                 f"  Message: {condition.message}\n"
-
     return describe
 
 def get_pod_events(api_instance, namespace, pod_name):
