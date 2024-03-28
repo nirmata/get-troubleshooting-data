@@ -29,6 +29,6 @@ kubectl -n abc create secret generic api-token-secret --from-literal=apiToken=xx
 Deploy a sample deployment using `depl-readonlyrootfs.yaml` to simulate a crashing pod scenario. After three restarts, the Kyverno policy will trigger a job to collect troubleshooting data from the crashing pod and create a Jira ticket.
 
 ### Enhancements
-Implement a cleanup policy to remove all jobs created by this Kyverno policy at scheduled intervals.
-Automatically scale down deployments to 0 replicas for deployments that have experienced more than five restarts.
-Implement generate policy to automatically sync a secret consisting of your jira api token across namespaces to avoid the manual step of creating the secret in every namespace.
+- Implement a cleanup policy to remove all jobs created by this Kyverno policy at scheduled intervals.
+- Automatically scale down deployments to 0 replicas for deployments that have experienced more than five restarts.
+- Implement generate policy to automatically sync a secret consisting of your jira api token across namespaces to avoid the manual step of creating the secret in every namespace.
