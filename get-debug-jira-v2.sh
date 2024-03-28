@@ -19,18 +19,6 @@ echo
 
 ls -lrth /tmp/${podname}_*/*.txt
 
-# echo "server: $server"
-# echo "key: $key"
-# echo "issuetype: $issuetype"
-# echo "podname: $podname"
-# echo "namespace: $namespace"
-# echo "summary: $summary"
-# echo "descriptiontext: $descriptiontext"
-# echo "token: $token"
-
-# echo "Printing the contents of the token volume"
-# cat /tmp/api-token/apiToken
-
 curl -s --location -X POST "${server}/rest/api/3/issue/" \
 --header 'Content-Type: application/json' \
 --header "Authorization: Basic $token" \
