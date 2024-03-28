@@ -1,7 +1,6 @@
 #!/bin/bash
 
 server="$1"
-#token="c2FnYXJAbmlybWF0YS5jb206QVRBVFQzeEZmR0YwRkV6ejFmZTNwVXpJNHBhWGVwcHMxbW9CTmFJaW9CX3B6LVBEU0wyLVZNajRqaUhSM05GZ2lqZGd6YzBvMjNqemxuMWZDVmlpYUp2WWJOM0dURE5lQVJad3pfRnJlU0ZuQk5jYTFuaTJyUi12ZUdjQm1YMmI3ZlpGYWpJaVd5N2s4QjlsWEwzTXdiVmc2el9xMGJOdllvMThEeDdJS1JaaFB2WVRXVk4zYk9VPURENjNEMzA2"
 token="$(cat /tmp/api-token/apiToken)"
 key="$2"
 issuetype="$3"
