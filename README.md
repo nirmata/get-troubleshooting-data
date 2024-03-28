@@ -7,7 +7,7 @@ This repository includes resources for testing a Kyverno policy designed to init
 ## Usage:
 
 ### Building the Image
-This process involves building a custom image containing a Python script for extracting pod details.
+This process involves building a custom image containing a Python script for extracting pod details. For testing purpose, the same image provided in the policy can be used as well. 
 
 ```
 # Clone this repository
