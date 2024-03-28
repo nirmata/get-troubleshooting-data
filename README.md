@@ -1,6 +1,9 @@
 # Kyverno Policy Testing Repository
 This repository includes resources for testing a Kyverno policy designed to initiate a job. This job gathers troubleshooting data (including logs, kubectl describe output, and events from the namespace) from pods that have restarted three times and subsequently creates a Jira ticket.
 
+## Prerequisites:
+- A Kubernetes cluster with Kyverno 1.10 or above installed. 
+
 ## Usage:
 
 ### Building the Image
@@ -27,6 +30,13 @@ kubectl -n <namespace> create secret generic api-token-secret --from-literal=api
 
 ### Testing
 Deploy a sample deployment using `depl-readonlyrootfs.yaml` to simulate a crashing pod scenario. After three restarts, the Kyverno policy will trigger a job to collect troubleshooting data from the crashing pod and create a Jira ticket.
+
+```
+kubectl get pods -n abc
+NAME                                                              READY   STATUS             RESTARTS        AGE
+get-debug-data-nginx-deployment-559458cb7b-kvzkb-ehebp7v5-5qtrp   0/1     Completed          0               59m
+nginx-deployment-559458cb7b-kvzkb                                 0/1     CrashLoopBackOff   16 (3m3s ago)   60m
+```
 
 ### Enhancements
 - Implement a cleanup policy to remove all jobs created by this Kyverno policy at scheduled intervals.
